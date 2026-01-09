@@ -149,7 +149,6 @@
 }
 
 .header__mobile-menu {
-    display: none;
     position: fixed;
     top: 70px;
     left: 0;
@@ -160,6 +159,8 @@
     transform: translateX(100%);
     transition: transform var(--transition-base);
     overflow-y: auto;
+    z-index: 999;
+    display: none;
 }
 
 .header__mobile-menu--open {
