@@ -1,0 +1,138 @@
+.home {
+    overflow: hidden;
+}
+
+/* Founder Section */
+.founder {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-background) 100%);
+    padding: var(--space-10) 0;
+}
+
+.founder .section {
+    padding: 0;
+}
+
+.founder__content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.founder__badge {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-4);
+}
+
+.founder__content h2 {
+    margin-bottom: var(--space-4);
+}
+
+.founder__bio {
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+}
+
+.founder__text p {
+    line-height: 1.8;
+    margin-bottom: var(--space-4);
+}
+
+.founder__quote {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-style: italic;
+    color: var(--color-primary);
+    margin: var(--space-4) 0 var(--space-6) !important;
+}
+
+.founder__socials {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.founder__socials .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* Instagram Section */
+.instagram {
+    text-align: center;
+}
+
+.instagram__cta {
+    display: flex;
+    justify-content: center;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-white);
+}
+
+.newsletter__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+}
+
+.newsletter__text h2 {
+    color: var(--color-white);
+    margin-bottom: var(--space-2);
+}
+
+.newsletter__text p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.newsletter__form {
+    display: flex;
+    gap: var(--space-3);
+    flex-shrink: 0;
+}
+
+.newsletter__input {
+    min-width: 280px;
+    border: none;
+}
+
+.newsletter__form .btn {
+    background: var(--color-accent);
+    border: none;
+}
+
+.newsletter__form .btn:hover {
+    background: var(--color-accent-dark);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .newsletter__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter__form {
+        width: 100%;
+        max-width: 400px;
+        flex-direction: column;
+    }
+
+    .newsletter__input {
+        min-width: auto;
+        width: 100%;
+    }
+}
