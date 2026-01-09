@@ -24,12 +24,28 @@ function Header({ onCartClick }) {
         setIsMobileMenuOpen(false);
     }, [location]);
 
+    // Prevent body scroll when menu is open
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMobileMenuOpen]);
+
     const navLinks = [
         { path: '/', label: 'Home' },
         { path: '/shop', label: 'Shop' },
         { path: '/about', label: 'About' },
         { path: '/contact', label: 'Contact' },
     ];
+
+    const handleNavClick = () => {
+        setIsMobileMenuOpen(false);
+    };
 
     return (
         <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
@@ -82,26 +98,29 @@ function Header({ onCartClick }) {
                 </button>
             </div>
 
-            {/* Mobile Menu */}
-            <div className={`header__mobile-menu ${isMobileMenuOpen ? 'header__mobile-menu--open' : ''}`}>
-                <nav className="header__mobile-nav">
-                    {navLinks.map(link => (
-                        <Link
-                            key={link.path}
-                            to={link.path}
-                            className={`header__mobile-link ${location.pathname === link.path ? 'header__mobile-link--active' : ''}`}
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
-                </nav>
-                <div className="header__mobile-actions">
-                    <button className="btn btn-primary btn-lg" onClick={onCartClick}>
-                        <ShoppingBag size={20} />
-                        View Cart ({cartCount})
-                    </button>
+            {/* Mobile Menu - Conditionally Rendered */}
+            {isMobileMenuOpen && (
+                <div className="header__mobile-menu">
+                    <nav className="header__mobile-nav">
+                        {navLinks.map(link => (
+                            <Link
+                                key={link.path}
+                                to={link.path}
+                                className={`header__mobile-link ${location.pathname === link.path ? 'header__mobile-link--active' : ''}`}
+                                onClick={handleNavClick}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </nav>
+                    <div className="header__mobile-actions">
+                        <button className="btn btn-primary btn-lg" onClick={() => { onCartClick(); setIsMobileMenuOpen(false); }}>
+                            <ShoppingBag size={20} />
+                            View Cart ({cartCount})
+                        </button>
+                    </div>
                 </div>
-            </div>
+            )}
         </header>
     );
 }
