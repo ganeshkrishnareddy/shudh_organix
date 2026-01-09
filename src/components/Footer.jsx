@@ -82,9 +82,18 @@ function Footer() {
                             <h4>Company</h4>
                             <ul>
                                 <li><Link to="/about" onClick={handleNavClick}>About Us</Link></li>
-                                <li><Link to="/about" onClick={handleNavClick}>Our Story</Link></li>
                                 <li><Link to="/contact" onClick={handleNavClick}>Contact</Link></li>
-                                <li><a href="/#faq">FAQs</a></li>
+                                <li><Link to="/contact#faq" onClick={handleNavClick}>FAQs</Link></li>
+                            </ul>
+                        </div>
+
+                        {/* Policies */}
+                        <div className="footer__links">
+                            <h4>Policies</h4>
+                            <ul>
+                                <li><Link to="/refund-policy" onClick={handleNavClick}>Refund Policy</Link></li>
+                                <li><Link to="/privacy" onClick={handleNavClick}>Privacy Policy</Link></li>
+                                <li><Link to="/terms" onClick={handleNavClick}>Terms & Conditions</Link></li>
                             </ul>
                         </div>
 

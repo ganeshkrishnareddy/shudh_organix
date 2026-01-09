@@ -25,9 +25,9 @@
 
 .footer__grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: var(--space-12);
-    margin-bottom: var(--space-12);
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
 }
 
 /* Brand */
@@ -38,7 +38,7 @@
 .footer__logo img {
     height: 60px;
     margin-bottom: var(--space-4);
-    filter: brightness(0) invert(1);
+    /* Logo displays with original colors - no filter needed */
 }
 
 .footer__tagline {

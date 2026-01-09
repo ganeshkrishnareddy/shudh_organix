@@ -1,0 +1,93 @@
+.legal-page {
+    padding-top: 70px;
+}
+
+/* Hero */
+.legal-page__hero {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-white);
+    padding: var(--space-10) 0;
+    text-align: center;
+}
+
+.legal-page__hero h1 {
+    color: var(--color-white);
+    margin-bottom: var(--space-2);
+}
+
+.legal-page__hero p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Content */
+.legal-page__content {
+    background: var(--color-background);
+}
+
+.legal-page__text {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.legal-page__text h2 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.legal-page__text h2:first-child {
+    margin-top: 0;
+}
+
+.legal-page__text p {
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+}
+
+.legal-page__text ul,
+.legal-page__text ol {
+    margin-bottom: var(--space-4);
+    padding-left: var(--space-6);
+}
+
+.legal-page__text li {
+    line-height: 1.7;
+    margin-bottom: var(--space-2);
+}
+
+/* Highlight Box */
+.legal-page__highlight {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-background));
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-6);
+    text-align: center;
+}
+
+.legal-page__highlight h2 {
+    margin-top: 0;
+    border-bottom: none;
+    font-size: var(--text-2xl);
+}
+
+.legal-page__highlight p {
+    font-size: var(--text-lg);
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .legal-page__text {
+        padding: var(--space-5);
+    }
+
+    .legal-page__text h2 {
+        font-size: var(--text-lg);
+    }
+}
